@@ -7,3 +7,74 @@ body {
 	margin: 30px 50px;
 	line-height: 1.4rem;
 }
+img {
+	max-width: 100%;
+}
+
+/* Wrapper */
+
+.wrapper {
+	display: grid;
+}
+
+/* Top Container */
+
+.top-container {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas: 
+		'showcase showcase top-box-a'
+		'showcase showcase top-box-b';
+}
+
+/* Showcase */
+
+.showcase {
+	grid-area: showcase;
+	min-height: 400px;
+	background: url(https://images.unsplash.com/photo-1505816328275-34db3b7cef14?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8ba0e71a8307fc17aea75cf4234b0fd1&auto=format&fit=crop&w=1050&q=80);
+	background-size: cover;
+	background-position: center;
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center
+	box-shadow: var(--shadow);
+}
+
+.showcase h1 {
+	font-size: 4rem;
+	margin-bottom: 0;
+	color: var(--light);
+}
+
+.showcase p {
+	font-size: 1.3rem;
+	margin-top: 0;
+	color: var(--light);
+}
+
+/* Top Box */
+
+.top-box {
+	background: var(--primary);
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	box-shadow: var(--shadow);
+	padding: 1.5rem;
+}
+
+.top-box .price {
+	font-size: 2.5rem;
+}
+
+
+.top-box-a {
+	grid-area: top-box-a;
+}
+
+.top-box-b {
+	grid-area: top-box-b;
+}
