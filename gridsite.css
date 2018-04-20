@@ -1,3 +1,9 @@
+:root {
+	--primary: #ddd;
+	--dark: #333;
+	--light: #fff;
+	--shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+
 html {
 	box-sizing: border-box;
 	font-family: Arial, Helvetica, sans-serif;
@@ -32,7 +38,7 @@ img {
 .showcase {
 	grid-area: showcase;
 	min-height: 400px;
-	background: url(https://images.unsplash.com/photo-1505816328275-34db3b7cef14?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8ba0e71a8307fc17aea75cf4234b0fd1&auto=format&fit=crop&w=1050&q=80);
+	background: url(https://unsplash.com/photos/buF62ewDLcQ)
 	background-size: cover;
 	background-position: center;
 	padding: 3rem;
@@ -77,4 +83,44 @@ img {
 
 .top-box-b {
 	grid-area: top-box-b;
+}
+
+/* Boxes */
+
+.boxes {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-rows: columns (auto-fit, minmax(200px, 1fr));
+}
+
+.box {
+	background: var(--primary);
+	text-align: center;
+	padding: 1.5rem, 2rem;
+	box-shadow: var(--shadow);
+}
+
+/* Info */
+
+.info {
+	background: var(--primary);
+	box-shadow: var(--shadow);
+	display: grid;
+	grid-gap: 30px;
+	grid-template-columns: repeat(2, 1fr);
+	padding: 3rem;
+}
+
+/* Portfolio */
+
+.portfolio {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+
+.portfolio img {
+	width: 100%;
+	box-shadow: var(--shadow)
 }
